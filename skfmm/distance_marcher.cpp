@@ -99,7 +99,7 @@ double distanceMarcher::solveQuadratic(int i, const double &a,
   }
   else
   {
-    return 0;
+    return distance_[i];
   }
   if (phi_[i] > doubleEpsilon) return r0;
   else return r1;
