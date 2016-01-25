@@ -82,7 +82,7 @@ double travelTimeMarcher::solveQuadratic(int i, const double &a,
   }
   else
   {
-    return 0;
+    return speed_[i];
   }
   return r0;
 }
