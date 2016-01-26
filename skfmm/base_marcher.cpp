@@ -174,12 +174,10 @@ void baseMarcher::solve()
                 d =  updatePointOrderTwo(naddr);
               else
                 d =  updatePointOrderOne(naddr);
-              if (d)
-              {
-                distance_[naddr]=d;
-                flag_[naddr]=Narrow;
-                heapptr_[naddr] = heap_->push(naddr,fabs(d));
-              }
+
+              distance_[naddr]=d;
+              flag_[naddr]=Narrow;
+              heapptr_[naddr] = heap_->push(naddr,fabs(d));
             }
           }
           //==========================================================
@@ -194,11 +192,8 @@ void baseMarcher::solve()
               if (naddr2!=-1 && flag_[naddr2]==Narrow)
               {
                 double d = updatePointOrderTwo(naddr2);
-                if (d)
-                {
-                  heap_->set(heapptr_[naddr2], fabs(d));
-                  distance_[naddr2]=d;
-                }
+                heap_->set(heapptr_[naddr2], fabs(d));
+                distance_[naddr2]=d;
               }
             }
           }
